@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="w-full">
+  <h1 class="text-blue-400 mx-auto w-64"> Welcome to jekyll-tailwind-starter!</h1>
+</div>
+
+{% for post in site.posts %}
+  <a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}

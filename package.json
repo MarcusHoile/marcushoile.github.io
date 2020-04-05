@@ -1,20 +1,13 @@
 {
-  "name": "marcushoile.github.io",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Marcus Hoile",
-  "license": "MIT",
-  "private": false,
   "scripts": {
-    "start": "./node_modules/.bin/webpack --watch | bundle exec jekyll serve --livereload --incremental",
-    "build": "./node_modules/.bin/webpack | bundle exec jekyll build"
+    "start": "bundle exec jekyll serve --livereload --incremental",
+    "build": "bundle exec jekyll build"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
-    "tailwindcss": "^1.2.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "autoprefixer": "^9.3.1",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "purgecss": "^2.1.0",
+    "tailwindcss": "^1.0.0"
   }
 }
