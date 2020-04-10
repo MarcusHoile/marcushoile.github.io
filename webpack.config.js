@@ -1,12 +1,13 @@
 const path = require("path");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: "production",
   watch: true,
-  entry: path.join(__dirname, "webpack", "main"),
+  entry: ["./webpack/main.js"],
   output: {
-    filename: "[name]-bundle.js",
-    path: path.resolve(__dirname, "./src/assets/js/")
+    filename: "js/[name]-bundle.js",
+    path: path.resolve(__dirname, "src/assets/")
   },
   module: {
     rules: [
@@ -21,9 +22,44 @@ module.exports = {
           presets: ["@babel/preset-env"]
         }
       },
-    ],
+      {
+        test: /\.(sc|c)ss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            // This loader resolves url() and @imports inside CSS
+            loader: "css-loader",
+          },
+          {
+            // Then we apply postCSS fixes like autoprefixer and minifying
+            loader: "postcss-loader"
+          },
+          {
+            // First we transform SASS to standard CSS
+            loader: "sass-loader",
+            options: {
+              implementation: require("sass")
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ],
+      },
+    ]
   },
-  resolve: {
-    extensions: [".json", ".js", ".jsx"],
-  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: './[name].css' }),
+  ]
 };
