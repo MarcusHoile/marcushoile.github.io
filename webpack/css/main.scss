@@ -14,8 +14,20 @@
   font-family: 'PoppinsBold', Helvetica, sans-serif;
 }
 
+// total transition duration will need to match tiny slider autoplayTimeout
+.tns-item {
+  transition-property: opacity;
+  transition-delay: 4s;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.tns-slide-active {
+  opacity: 0,
+}
+
 .carousel .tns-item {
-  @apply text-5xl #{!important};
+  @apply text-3xl #{!important};
 }
 
 @screen sm {

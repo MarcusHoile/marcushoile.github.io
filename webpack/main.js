@@ -8,10 +8,12 @@ import { tns } from "./../node_modules/tiny-slider/src/tiny-slider"
 tns({
   autoplay: true,
   autoplayButtonOutput: false,
+  autoplayTimeout: 5000,
   container: '.carousel',
   controls: false,
   items: 1,
+  loop: true,
   nav: false,
   slideBy: 'page',
-  speed: 400
+  speed: 500
 });

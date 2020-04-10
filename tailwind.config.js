@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        'screen': '100vw'
+      },
+    },
   },
   variants: {},
   plugins: [],
