@@ -1,0 +1,44 @@
+---
+---
+/* Front matter is necessary for Jekyll */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* Write your styles below this line. */
+
+/* Write your styles above this line. */
+
+@tailwind utilities;
+
+@font-face {
+  font-family: "PoppinsBold";
+  src: url("../fonts/Poppins-Bold.ttf");
+}
+
+* { box-sizing: border-box; }
+
+.poppins-bold {
+  font-family: 'PoppinsBold', Helvetica, sans-serif;
+}
+
+.carousel {
+  background: #FAFAFA;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
