@@ -3,39 +3,27 @@
 
 
 /* Write your styles below this line. */
-@import "~flickity/css/flickity.css";
+@import "~tiny-slider/dist/tiny-slider.css";
 
 @font-face {
   font-family: "PoppinsBold";
   src: url("../fonts/Poppins-Bold.ttf");
 }
 
-* { box-sizing: border-box; }
-
 .poppins-bold {
   font-family: 'PoppinsBold', Helvetica, sans-serif;
 }
 
-.carousel {
-  background: #FAFAFA;
+.carousel .tns-item {
+  @apply text-5xl #{!important};
 }
 
-.carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
+@screen sm {
+  .carousel .tns-item {
+    @apply text-6xl #{!important};
+  }
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
 
 /* Write your styles above this line. */
 @import "tailwindcss/utilities";
