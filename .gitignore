@@ -1,6 +1,7 @@
 _site
-src/assets
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+public/assets
+public/*.html
