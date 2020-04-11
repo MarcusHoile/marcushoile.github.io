@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     filename: "js/[name]-bundle.js",
-    path: path.resolve(__dirname, "src/assets/")
+    path: path.resolve(__dirname, "assets/")
   },
   module: {
     rules: [
@@ -68,6 +68,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: './[name].css' }),
+    new MiniCssExtractPlugin({ filename: '[name].css' }),
   ]
 };

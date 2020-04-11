@@ -17,24 +17,27 @@ plugins:
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 destination: public
-source: src
 exclude:
-  - .sass-cache/
+  - .gitignore
   - .jekyll-cache/
+  - .sass-cache/
+  - bin
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - netlify.toml
   - node_modules/
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - public/
+  - purgecss.config.js
+  - README.md
+  - tailwind.config.js
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - webpack.config.js
+  - webpack/
   - yarn.lock
-  - package-lock.json
-  - README.md
-  - postcss.config.js
-  - purgecss.config.js
-  - tailwind.config.js
-  - netlify.toml
-  - bin
-  - .gitignore
