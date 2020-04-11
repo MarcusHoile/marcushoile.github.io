@@ -7,22 +7,12 @@ js_bundle: main-bundle
   <div class="mx-auto text-4xl sm:text-6xl poppins-bold p-4 overflow-hidden max-w-screen">
     <div class="leading-none">Marcus Hoile</div>
     <div class="carousel">
-      <div class="h-64 w-full">
-        <div class="leading-none">codes things</div>
-        <div class="leading-none">for the web.</div>
-      </div>
-      <div class="h-64 w-full">
-        <div class="leading-none">is more backend</div>
-        <div class="leading-none">than frontend.</div>
-      </div>
-      <div class="h-64 w-full">
-        <div class="leading-none">can center content</div>
-        <div class="leading-none">on a page.</div>
-      </div>
-      <div class="h-64 w-full">
-        <div class="leading-none">makes annoying</div>
-        <div class="leading-none">carousels.</div>
-      </div>
+      {% for skill in site.data.skills %}
+        <div class="h-64 w-full">
+          <div class="leading-none">{{skill.top_line}}</div>
+          <div class="leading-none">{{skill.bottom_line}}</div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
