@@ -10,6 +10,16 @@
   src: url("../fonts/Poppins-Bold.ttf");
 }
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 2fr;
+}
+
+section {
+  grid-row-start: 3;
+}
+
 .poppins-bold {
   font-family: 'PoppinsBold', Helvetica, sans-serif;
 }
@@ -33,6 +43,18 @@
 @screen sm {
   .carousel .tns-item {
     @apply text-6xl #{!important};
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+
+  section {
+    grid-column: 2 / span 2;
+  }
+
+  nav {
+    grid-column-end: 3;
   }
 }
 
