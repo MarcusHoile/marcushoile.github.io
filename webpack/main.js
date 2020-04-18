@@ -14,6 +14,8 @@ tns({
   items: 1,
   loop: true,
   nav: false,
+  preventScrollOnTouch: true,
   slideBy: 'page',
-  speed: 500
+  speed: 500,
+  touch: false
 });
