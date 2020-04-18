@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "Marcus Hoile",
+  "description": "My portfolio and things",
+  "icons": {
+    "60": "/images/firefox_app_60x60.png",
+    "128": "/images/firefox_app_128x128.png",
+    "512": "/images/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Me, of course",
+    "url": null
+  }
+}

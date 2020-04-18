@@ -2,6 +2,9 @@ const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// only required to update the favicon html
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
   mode: "production",
@@ -69,5 +72,19 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: '[name].css' }),
+    // only needed when updating favicons
+    // new HtmlWebpackPlugin(),
+    // new FaviconsWebpackPlugin({
+    //   logo: './webpack/favicon.png',
+    //   outputPath: './images',
+    //   prefix: 'images',
+    //   inject: true,
+    //   favicons: {
+    //     appName: 'Marcus Hoile',
+    //     appDescription: 'My portfolio and things',
+    //     developerName: 'Me, of course',
+    //   }
+
+    // })
   ]
 };

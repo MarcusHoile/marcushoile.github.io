@@ -21,6 +21,7 @@ exclude:
   - .gitignore
   - .jekyll-cache/
   - .sass-cache/
+  - assets/index.html
   - bin
   - gemfiles/
   - Gemfile
