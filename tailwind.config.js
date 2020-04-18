@@ -4,6 +4,10 @@ module.exports = {
       maxWidth: {
         'screen': '100vw'
       },
+      minHeight: {
+        '2/3': '70vh',
+        'screen': '100vh'
+      }
     },
   },
   variants: {},

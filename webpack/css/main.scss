@@ -13,11 +13,16 @@
 .grid-layout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 30vh auto;
+  grid-template-rows: 100px 30vh auto auto;
 }
 
 section {
   grid-row-start: 3;
+}
+
+footer {
+  grid-row-start: 4;
+  grid-column: 1 / 5;
 }
 
 .poppins-bold {

@@ -3,15 +3,15 @@ layout: default
 js_bundle: main-bundle
 ---
 
-<section class="mx-auto w-full flex flex-col overflow-hidden">
+<section class="mx-auto w-full flex flex-col overflow-hidden min-h-2/3">
   <div class="mx-auto text-4xl sm:text-6xl poppins-bold p-4 w-full">
     <div class="leading-none">Marcus Hoile</div>
     <div class="carousel">
       {% for skill in site.data.skills %}
-        <div class="h-64 w-full">
-          <div class="leading-none">{{skill.top_line}}</div>
-          <div class="leading-none">{{skill.bottom_line}}</div>
-        </div>
+      <div class="h-64 w-full">
+        <div class="leading-none">{{skill.top_line}}</div>
+        <div class="leading-none">{{skill.bottom_line}}</div>
+      </div>
       {% endfor %}
     </div>
   </div>
